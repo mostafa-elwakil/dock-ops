@@ -27,6 +27,7 @@ app = Flask(__name__)
 CORS(app, origins=['http://localhost:*', 'http://127.0.0.1:*', 'http://*.local:*', '127.0.0.1'])
 
 # Server configuration
+SERVER_VERSION = '2.3.0'
 PORT = 8765
 HOST = '0.0.0.0'
 
@@ -940,7 +941,7 @@ def health_check():
     return jsonify({
         'status': 'ok',
         'server': 'NexusDeck Companion Server',
-        'version': '2.2.0',
+        'version': SERVER_VERSION,
         'platform': platform.system(),
         'timestamp': datetime.now().isoformat()
     })
@@ -2313,7 +2314,7 @@ if __name__ == '__main__':
             pass
 
     print("=" * 70)
-    print("NexusDeck Companion Server v2.2.0")
+    print(f"NexusDeck Companion Server v{SERVER_VERSION}")
     print("=" * 70)
     print(f"Platform: {platform.system()} {platform.release()}")
     print(f"Python: {platform.python_version()}")
