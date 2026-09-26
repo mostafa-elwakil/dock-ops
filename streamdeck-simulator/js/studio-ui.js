@@ -17,9 +17,117 @@ class StudioUI {
         this.obsHandlers = { operationChange: null, testClick: null };
 
         this.iconPresets = [
-            '💻', '⚡', '🐳', '🐙', '🌐', '📡', '🎥', '🎮', '💬', '🖥️',
-            '📷', '⏺️', '⏹️', '⏯️', '▶️', '⏱️', '⏲️', '🕐', '🔥', '💾',
-            '🗑️', '📋', '📝', '📧', '📅', '🎵', '📺', '📸', '🔢', '⚙️'
+            { i: '💻', n: 'pc' },
+            { i: '⚡', n: 'cmd' },
+            { i: '🐳', n: 'docker' },
+            { i: '🐙', n: 'github' },
+            { i: '🌐', n: 'web' },
+            { i: '📡', n: 'ping' },
+            { i: '🎥', n: 'obs' },
+            { i: '🎮', n: 'game' },
+            { i: '💬', n: 'chat' },
+            { i: '🖥️', n: 'desk' },
+            { i: '📷', n: 'cam' },
+            { i: '⏺️', n: 'rec' },
+            { i: '⏹️', n: 'stop' },
+            { i: '⏯️', n: 'toggle' },
+            { i: '▶', n: 'play' },
+            { i: '⏱️', n: 'stopwatch' },
+            { i: '⏲️', n: 'timer' },
+            { i: '🕐', n: 'clock' },
+            { i: '🔥', n: 'cpu' },
+            { i: '💾', n: 'ram' },
+            { i: '🗑️', n: 'clear' },
+            { i: '📋', n: 'list' },
+            { i: '📝', n: 'note' },
+            { i: '📧', n: 'mail' },
+            { i: '📅', n: 'cal' },
+            { i: '🎵', n: 'music' },
+            { i: '📺', n: 'tv' },
+            { i: '📸', n: 'snap' },
+            { i: '🔢', n: 'num' },
+            { i: '⚙️', n: 'settings' },
+            { i: '🎬', n: 'scene' },
+            { i: '🎞', n: 'film' },
+            { i: '🎧', n: 'audio' },
+            { i: '🎤', n: 'mic' },
+            { i: '🔊', n: 'vol' },
+            { i: '🔇', n: 'mute' },
+            { i: '⏩', n: 'fwd' },
+            { i: '⏪', n: 'rew' },
+            { i: '🔀', n: 'shuffle' },
+            { i: '🔁', n: 'loop' },
+            { i: '📻', n: 'radio' },
+            { i: '⏭', n: 'next' },
+            { i: '⏮', n: 'prev' },
+            { i: '⏏', n: 'eject' },
+            { i: '📂', n: 'app' },
+            { i: '📁', n: 'dir' },
+            { i: '🔍', n: 'find' },
+            { i: '✂', n: 'cut' },
+            { i: '📌', n: 'pin' },
+            { i: '🖨', n: 'print' },
+            { i: '🎯', n: 'target' },
+            { i: '❤', n: 'fav' },
+            { i: '⭐', n: 'star' },
+            { i: '✅', n: 'done' },
+            { i: '❌', n: 'no' },
+            { i: '➕', n: 'add' },
+            { i: '➖', n: 'sub' },
+            { i: '✏', n: 'edit' },
+            { i: '❓', n: 'help' },
+            { i: '❗', n: 'alert' },
+            { i: '🔔', n: 'bell' },
+            { i: '🔕', n: 'quiet' },
+            { i: '📞', n: 'call' },
+            { i: '📹', n: 'meet' },
+            { i: '🤖', n: 'bot' },
+            { i: '🦊', n: 'fox' },
+            { i: '✈', n: 'send' },
+            { i: '📩', n: 'inbox' },
+            { i: '🏠', n: 'home' },
+            { i: '💡', n: 'light' },
+            { i: '🔌', n: 'plug' },
+            { i: '🌡', n: 'temp' },
+            { i: '🚪', n: 'door' },
+            { i: '🔒', n: 'lock' },
+            { i: '🔓', n: 'open' },
+            { i: '🌀', n: 'fan' },
+            { i: '☀', n: 'sun' },
+            { i: '🌙', n: 'night' },
+            { i: '⏰', n: 'alarm' },
+            { i: '🛋', n: 'sofa' },
+            { i: '🔋', n: 'batt' },
+            { i: '📶', n: 'wifi' },
+            { i: '🌤', n: 'weather' },
+            { i: '🌧', n: 'rain' },
+            { i: '❄', n: 'snow' },
+            { i: '💤', n: 'sleep' },
+            { i: '☕', n: 'coffee' },
+            { i: '🐛', n: 'bug' },
+            { i: '🔧', n: 'tool' },
+            { i: '📦', n: 'box' },
+            { i: '🚀', n: 'deploy' },
+            { i: '⌨', n: 'keys' },
+            { i: '🎹', n: 'piano' },
+            { i: '🧠', n: 'brain' },
+            { i: '🧪', n: 'test' },
+            { i: '🏷', n: 'tag' },
+            { i: '🔗', n: 'link' },
+            { i: '📎', n: 'attach' },
+            { i: '🧹', n: 'clean' },
+            { i: '📈', n: 'trend' },
+            { i: '📉', n: 'drop' },
+            { i: '🔐', n: 'sec' },
+            { i: '📖', n: 'read' },
+            { i: '🚗', n: 'car' },
+            { i: '🛒', n: 'cart' },
+            { i: '💰', n: 'cash' },
+            { i: '🕹', n: 'joy' },
+            { i: '🎲', n: 'dice' },
+            { i: '🔴', n: 'live' },
+            { i: '🟢', n: 'on' },
+            { i: '⏸', n: 'pause' }
         ];
 
         this.presetFiles = [
@@ -201,6 +309,7 @@ class StudioUI {
 
                     <div class="form-actions">
                         <button id="btn-apply-changes" class="btn btn-primary">Apply Changes</button>
+                        <button id="btn-autofill" class="btn btn-secondary" title="Fill name & icon from the action">✨ Auto-fill</button>
                         <button id="btn-test-action" class="btn btn-secondary">Test Action</button>
                     </div>
                 </div>
@@ -428,6 +537,14 @@ class StudioUI {
             this.testButtonAction();
         });
 
+        document.getElementById('btn-autofill')?.addEventListener('click', () => {
+            if (this.autoFillLabelIcon(true)) {
+                this.showToast('Name & icon filled from the action');
+            } else {
+                this.showToast('Nothing to fill — pick an action first', 2500);
+            }
+        });
+
         // Action type change
         document.getElementById('select-action-type')?.addEventListener('change', (e) => {
             this.updateActionConfig(e.target.value);
@@ -572,9 +689,32 @@ class StudioUI {
         const picker = document.getElementById('icon-picker');
         if (!picker) return;
 
-        picker.innerHTML = this.iconPresets.map((icon) =>
-            `<button type="button" class="icon-preset-btn" data-icon="${this.escapeHtml(icon)}" title="${this.escapeHtml(icon)}">${icon}</button>`
-        ).join('');
+        const renderGrid = (filter = '') => {
+            const query = filter.trim().toLowerCase();
+            const matches = this.iconPresets.filter((preset) => {
+                const icon = typeof preset === 'string' ? preset : preset.i;
+                const name = typeof preset === 'string' ? icon : (preset.n || '');
+                return !query || name.includes(query) || icon.includes(query);
+            });
+            const grid = picker.querySelector('.icon-preset-grid');
+            if (grid) {
+                grid.innerHTML = matches.map((preset) => {
+                    const icon = typeof preset === 'string' ? preset : preset.i;
+                    const name = typeof preset === 'string' ? icon : (preset.n || icon);
+                    const safe = this.escapeHtml(icon);
+                    return `<button type="button" class="icon-preset-btn" data-icon="${safe}" title="${this.escapeHtml(name)}">${icon}</button>`;
+                }).join('') || '<span class="text-muted">No icons match</span>';
+            }
+        };
+
+        picker.innerHTML = `
+            <input type="text" class="form-control icon-preset-filter" placeholder="🔍 Search icons…" aria-label="Search icons">
+            <div class="icon-preset-grid"></div>
+        `;
+        renderGrid();
+        picker.querySelector('.icon-preset-filter')?.addEventListener('input', (e) => {
+            renderGrid(e.target.value);
+        });
 
         picker.addEventListener('click', (event) => {
             const button = event.target.closest('.icon-preset-btn');
@@ -852,6 +992,116 @@ class StudioUI {
         return this.escapeHtml(value ?? '');
     }
 
+    suggestLabelIcon(action) {
+        // Pure helper: guess button label + icon from an action config.
+        if (!action || !action.type) return { label: '', icon: '' };
+        const appIcons = {
+            obs: '🎥', chrome: '🌐', edge: '🌐', firefox: '🦊',
+            code: '💻', vscode: '💻', powershell: '💻', cmd: '💻',
+            vlc: '🎥', discord: '💬', whatsapp: '💬', telegram: '✈️',
+            notepad: '📝', excel: '📊', word: '📄', winword: '📄',
+            teams: '👥', zoom: '📹', calc: '🔢', calculator: '🔢',
+            terminal: '⚡', wt: '⚡', spotify: '🎵', steam: '🎮',
+        };
+        const appIconFor = (name) => {
+            const key = String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (appIcons[key]) return appIcons[key];
+            const hit = Object.keys(appIcons).find((k) => key.includes(k));
+            return hit ? appIcons[hit] : '📂';
+        };
+        const titleCase = (text) => String(text || '')
+            .replace(/[-_]+/g, ' ')
+            .replace(/\b\w/g, (c) => c.toUpperCase())
+            .trim();
+        switch (action.type) {
+            case 'open_app': {
+                const raw = String(action.app || '').trim();
+                const base = raw.split(/[\\/]/).pop().replace(/\.exe$/i, '') || raw;
+                return { label: titleCase(base) || 'Open App', icon: appIconFor(base) };
+            }
+            case 'open_url':
+            case 'http_check': {
+                let host = 'Open Link';
+                try {
+                    host = new URL(action.url).hostname.replace(/^www\./, '') || host;
+                } catch (error) { /* keep default */ }
+                return { label: host, icon: '🌐' };
+            }
+            case 'switch_profile':
+                return action.name
+                    ? { label: action.name, icon: '🔄' }
+                    : { label: 'Switch Profile', icon: '🔄' };
+            case 'run_command': {
+                const first = String(action.command || '').trim().split(/\s+/)[0] || 'Run';
+                return { label: first.length > 14 ? `${first.slice(0, 14)}…` : first, icon: '⌨️' };
+            }
+            case 'keyboard_shortcut':
+                return { label: action.keys || 'Shortcut', icon: '⌨️' };
+            case 'home_assistant': {
+                const entity = String(action.entity_id || '').split('.')[1]
+                    || action.entity_id || 'Home';
+                return { label: titleCase(entity) || 'Home', icon: '🏠' };
+            }
+            case 'obs_control': {
+                const ops = {
+                    set_scene: { label: action.scene || 'Scene', icon: '🎬' },
+                    start_recording: { label: 'Start Rec', icon: '⏺️' },
+                    stop_recording: { label: 'Stop Rec', icon: '⏹️' },
+                    toggle_recording: { label: 'Rec Toggle', icon: '⏯️' },
+                    set_source_visibility: { label: action.source || 'Source', icon: '📷' },
+                };
+                return ops[action.operation] || { label: 'OBS', icon: '🎥' };
+            }
+            case 'copy_text': {
+                const text = String(action.text || '').trim() || 'Copy';
+                return { label: text.length > 14 ? `${text.slice(0, 14)}…` : text, icon: '📋' };
+            }
+            case 'ping':
+                return { label: action.host || 'Ping', icon: '📡' };
+            case 'docker_command':
+                return { label: action.dockerAction || 'Docker', icon: '🐳' };
+            case 'macro':
+                return { label: 'Macro', icon: '⚙️' };
+            default:
+                return { label: titleCase(action.type) || 'Action', icon: '⚙️' };
+        }
+    }
+
+    autoFillLabelIcon(overwrite = false) {
+        const actionType = document.getElementById('select-action-type')?.value || '';
+        if (!actionType) return false;
+        let action = null;
+        try {
+            action = this.buildActionFromInputs(actionType);
+        } catch (error) {
+            this.showToast(error.message, 3000);
+            return false;
+        }
+        const suggestion = this.suggestLabelIcon(action);
+        const labelInput = document.getElementById('input-label');
+        const iconInput = document.getElementById('input-icon');
+        let filled = false;
+        if (labelInput && (overwrite || !labelInput.value.trim()) && suggestion.label) {
+            labelInput.value = suggestion.label;
+            filled = true;
+        }
+        if (iconInput && (overwrite || !iconInput.value.trim()) && suggestion.icon) {
+            iconInput.value = suggestion.icon;
+            filled = true;
+        }
+        if (filled) this.updateButtonPreview();
+        return filled;
+    }
+
+    profileOptions(selectedName = '') {
+        const names = (this.profiles?.profiles || []).map((p) => p.name).filter(Boolean);
+        const unique = [...new Set(names)];
+        return unique.map((name) => {
+            const selected = name === selectedName ? ' selected' : '';
+            return `<option value="${this.escapeHtml(name)}"${selected}>${this.escapeHtml(name)}</option>`;
+        }).join('');
+    }
+
     updateActionConfig(actionType, existingAction = null) {
         const configContainer = document.getElementById('action-config');
         configContainer.innerHTML = '';
@@ -935,7 +1185,10 @@ class StudioUI {
             'keyboard_shortcut': `
                 <div class="form-group">
                     <label>Keys (e.g. ctrl+c, win+l, media_play_pause)</label>
-                    <input type="text" id="action-keys" class="form-control" placeholder="ctrl+shift+s" value="${this.attrValue(existingAction?.keys)}">
+                    <div style="display: flex; gap: 6px;">
+                        <input type="text" id="action-keys" class="form-control" placeholder="ctrl+shift+s" value="${this.attrValue(existingAction?.keys)}">
+                        <button id="btn-capture-keys" class="btn btn-secondary" type="button" title="Press the keys instead of typing">🎹</button>
+                    </div>
                 </div>
                 <small style="display: block; margin-top: 6px; opacity: 0.7;">Modifiers: ctrl, alt, shift, win + key (a-z, 0-9, f1-f24, enter, tab, esc, arrows, media_play_pause, volume_up...). Ctrl+Alt+Delete is blocked by Windows.</small>
             `,
@@ -1062,10 +1315,13 @@ class StudioUI {
             `,
             'switch_profile': `
                 <div class="form-group">
-                    <label>Target Profile Name (Optional)</label>
-                    <input type="text" id="action-profile-name" class="form-control" placeholder="Leave empty to cycle" value="${this.attrValue(existingAction?.name)}">
+                    <label>Target Profile</label>
+                    <select id="action-profile-name" class="form-control">
+                        <option value="">🔄 Cycle through all profiles</option>
+                        ${this.profileOptions(existingAction?.name)}
+                    </select>
                 </div>
-                <p class="text-muted" style="font-size: 12px; color: #888;">If empty, it cycles through all profiles.</p>
+                <p class="text-muted" style="font-size: 12px; color: #888;">Pick a profile to jump to, or cycle through all.</p>
             `,
             'macro': `
                 <div class="form-group">
@@ -1100,6 +1356,97 @@ class StudioUI {
         if (actionType === 'open_app') {
             this.setupOpenAppPicker();
         }
+
+        if (actionType === 'switch_profile') {
+            this.setupProfilePicker();
+        }
+
+        if (actionType === 'keyboard_shortcut') {
+            this.setupKeysCapture();
+        }
+    }
+
+    setupProfilePicker() {
+        document.getElementById('action-profile-name')?.addEventListener('change', () => {
+            this.autoFillLabelIcon(false);
+        });
+    }
+
+    keyComboFromEvent(event) {
+        // Pure helper: KeyboardEvent-like -> "ctrl+shift+s" (server vocabulary).
+        // Returns { combo } when complete, { armed } while only modifiers are
+        // held, or null when the key cannot be used (bare Esc cancels).
+        const mods = [];
+        if (event.ctrlKey) mods.push('ctrl');
+        if (event.altKey) mods.push('alt');
+        if (event.shiftKey) mods.push('shift');
+        if (event.metaKey) mods.push('win');
+        const key = event.key || '';
+        if (['Control', 'Alt', 'Shift', 'Meta'].includes(key)) {
+            return { armed: true, hint: mods.join('+') };
+        }
+        const named = {
+            ' ': 'space', Enter: 'enter', Tab: 'tab', Escape: 'esc',
+            Delete: 'delete', Insert: 'insert', Home: 'home', End: 'end',
+            PageUp: 'pgup', PageDown: 'pgdn', CapsLock: 'capslock',
+            PrintScreen: 'printscreen', Pause: 'pause',
+            AudioVolumeMute: 'mute', AudioVolumeUp: 'volume_up',
+            AudioVolumeDown: 'volume_down', MediaTrackNext: 'next_track',
+            MediaTrackPrevious: 'prev_track', MediaPlayPause: 'play_pause',
+            MediaStop: 'media_stop', LaunchMediaPlayer: 'play_pause',
+        };
+        let base = named[key];
+        if (!base) {
+            if (/^[a-z0-9]$/i.test(key)) {
+                base = key.toLowerCase();
+            } else if (/^Arrow(Up|Down|Left|Right)$/.test(key)) {
+                base = key.slice(5).toLowerCase();
+            } else if (/^F([1-9]|1[0-9]|2[0-4])$/.test(key)) {
+                base = key.toLowerCase();
+            } else {
+                return null;
+            }
+        }
+        if (base === 'esc' && mods.length === 0) return null; // bare Esc cancels
+        return { combo: [...mods, base].join('+') };
+    }
+
+    captureKeyCombo(input, button) {
+        if (!input || !button || button.dataset.armed === '1') return;
+        button.dataset.armed = '1';
+        const original = button.textContent;
+        button.textContent = '…';
+        button.title = 'Press the keys now (Esc cancels)';
+        const done = () => {
+            button.dataset.armed = '';
+            button.textContent = original;
+            button.title = 'Press the keys instead of typing';
+            document.removeEventListener('keydown', onKey, true);
+        };
+        const onKey = (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const result = this.keyComboFromEvent(event);
+            if (!result) {
+                done(); // unmappable key or bare Esc: cancel
+                return;
+            }
+            if (result.combo) {
+                input.value = result.combo;
+                input.dispatchEvent(new Event('input', { bubbles: true }));
+                this.showToast(`Captured: ${result.combo}`);
+                done();
+            } else {
+                button.textContent = result.hint ? `${result.hint}+…` : '…';
+            }
+        };
+        document.addEventListener('keydown', onKey, true);
+    }
+
+    setupKeysCapture() {
+        const input = document.getElementById('action-keys');
+        const button = document.getElementById('btn-capture-keys');
+        button?.addEventListener('click', () => this.captureKeyCombo(input, button));
     }
 
     async setupOpenAppPicker() {
@@ -1127,6 +1474,7 @@ class StudioUI {
         picker.addEventListener('change', () => {
             if (picker.value) {
                 input.value = picker.value;
+                this.autoFillLabelIcon(false);
             }
         });
     }
@@ -1175,23 +1523,34 @@ class StudioUI {
     addMacroStepRow(list, step = {}) {
         const row = document.createElement('div');
         row.className = 'macro-step';
-        row.style.cssText = 'display: flex; gap: 6px; margin-bottom: 6px;';
         const type = step.type || 'keyboard_shortcut';
         row.innerHTML = `
-            <select class="macro-step-type form-control">
-                <option value="keyboard_shortcut" ${type === 'keyboard_shortcut' ? 'selected' : ''}>Keys</option>
-                <option value="open_app" ${type === 'open_app' ? 'selected' : ''}>Open app</option>
-                <option value="open_url" ${type === 'open_url' ? 'selected' : ''}>Open URL</option>
-                <option value="run_command" ${type === 'run_command' ? 'selected' : ''}>Command</option>
-                <option value="copy_text" ${type === 'copy_text' ? 'selected' : ''}>Copy text</option>
-                <option value="home_assistant" ${type === 'home_assistant' ? 'selected' : ''}>Home Asst</option>
-                <option value="delay" ${type === 'delay' ? 'selected' : ''}>Wait</option>
-            </select>
-            <input class="macro-step-value form-control" placeholder="keys / app / url… (HA: domain.service:entity)" value="${this.attrValue(step.keys ?? step.app ?? step.url ?? step.command ?? step.text ?? step.ms ?? (step.entity_id ? step.domain + '.' + step.service + ':' + step.entity_id : ''))}">
-            <input class="macro-step-delay form-control" type="number" min="0" max="10000" placeholder="pause ms" style="max-width: 84px;" value="${this.attrValue(step.delay ?? '')}">
-            <button class="macro-step-remove btn btn-secondary" type="button">✕</button>
+            <div class="macro-step-row1">
+                <select class="macro-step-type form-control">
+                    <option value="keyboard_shortcut" ${type === 'keyboard_shortcut' ? 'selected' : ''}>Keys</option>
+                    <option value="open_app" ${type === 'open_app' ? 'selected' : ''}>Open app</option>
+                    <option value="open_url" ${type === 'open_url' ? 'selected' : ''}>Open URL</option>
+                    <option value="run_command" ${type === 'run_command' ? 'selected' : ''}>Command</option>
+                    <option value="copy_text" ${type === 'copy_text' ? 'selected' : ''}>Copy text</option>
+                    <option value="home_assistant" ${type === 'home_assistant' ? 'selected' : ''}>Home Asst</option>
+                    <option value="delay" ${type === 'delay' ? 'selected' : ''}>Wait</option>
+                </select>
+                <input class="macro-step-value form-control" placeholder="keys / app / url… (HA: domain.service:entity)" value="${this.attrValue(step.keys ?? step.app ?? step.url ?? step.command ?? step.text ?? step.ms ?? (step.entity_id ? step.domain + '.' + step.service + ':' + step.entity_id : ''))}">
+                <button class="macro-step-capture btn btn-secondary" type="button" title="Press the keys instead of typing">🎹</button>
+            </div>
+            <div class="macro-step-row2">
+                <input class="macro-step-delay form-control" type="number" min="0" max="10000" placeholder="pause ms" value="${this.attrValue(step.delay ?? '')}">
+                <span class="macro-step-hint">pause after step</span>
+                <button class="macro-step-remove btn btn-secondary" type="button">✕</button>
+            </div>
         `;
         row.querySelector('.macro-step-remove').addEventListener('click', () => row.remove());
+        row.querySelector('.macro-step-capture').addEventListener('click', (e) => {
+            this.captureKeyCombo(
+                row.querySelector('.macro-step-value'),
+                e.currentTarget
+            );
+        });
         list.appendChild(row);
     }
 
@@ -1437,9 +1796,6 @@ class StudioUI {
     applyButtonChanges() {
         if (!this.selectedButton) return;
 
-        const label = document.getElementById('input-label').value;
-        const icon = document.getElementById('input-icon').value;
-        const color = document.getElementById('input-color').value;
         const actionType = document.getElementById('select-action-type').value;
 
         let action = null;
@@ -1451,6 +1807,23 @@ class StudioUI {
                 return;
             }
         }
+
+        // Auto-fill empty name/icon from the action before applying.
+        if (action) {
+            const suggestion = this.suggestLabelIcon(action);
+            const labelInput = document.getElementById('input-label');
+            const iconInput = document.getElementById('input-icon');
+            if (labelInput && !labelInput.value.trim() && suggestion.label) {
+                labelInput.value = suggestion.label;
+            }
+            if (iconInput && !iconInput.value.trim() && suggestion.icon) {
+                iconInput.value = suggestion.icon;
+            }
+        }
+
+        const label = document.getElementById('input-label').value;
+        const icon = document.getElementById('input-icon').value;
+        const color = document.getElementById('input-color').value;
 
         this.deck.updateButton(this.selectedButton.index, {
             label,

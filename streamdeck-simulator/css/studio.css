@@ -362,6 +362,61 @@ body:not(.theme-light) select option {
     color: var(--ink);
     font-size: 14px;
     font-family: inherit;
+    min-width: 0;
+}
+
+.macro-step {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.macro-step-row1 {
+    display: flex;
+    gap: 6px;
+}
+
+.macro-step-row1 .macro-step-type {
+    flex: 0 0 92px;
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
+.macro-step-row1 .macro-step-value {
+    flex: 1;
+    min-width: 0;
+}
+
+.macro-step-row1 .macro-step-capture {
+    flex: 0 0 auto;
+    padding: 10px 12px;
+}
+
+.macro-step-row2 {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.macro-step-row2 .macro-step-delay {
+    flex: 0 0 86px;
+    min-width: 0;
+    padding: 8px 10px;
+}
+
+.macro-step-hint {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.macro-step-row2 .macro-step-remove {
+    margin-left: auto;
+    flex: 0 0 auto;
+    padding: 8px 12px;
 }
 
 .form-control:focus {
@@ -427,9 +482,19 @@ textarea.form-control {
 
 .form-actions {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
     padding-top: 12px;
     border-top: 1px solid var(--line);
+}
+
+.form-actions .btn {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 12px;
 }
 
 .btn {
@@ -616,10 +681,20 @@ textarea.form-control {
 }
 
 .icon-picker {
+    margin-top: 8px;
+}
+
+.icon-preset-filter {
+    margin-bottom: 6px;
+}
+
+.icon-preset-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 4px;
-    margin-top: 8px;
+    max-height: 190px;
+    overflow-y: auto;
+    padding-right: 2px;
 }
 
 .icon-preset-btn {
